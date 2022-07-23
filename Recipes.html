@@ -15,22 +15,26 @@
     margin-right: auto;
     font-size: 1.5em;
     margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-
+@media screen and (max-width: 800px) {
+  .block, #recipes {
+    width: 100%;
+  }}
     </style>
 </head>
 <body>
-    <h1>PORTUGAL</h1>
+    <h1 title="Click on me to discover the colors of Portugal. Try and get all 3.">PORTUGAL</h1>
     <hr />
     <ul class="nav">
-      <li><a href="index.html" class="block">Home</a></li>
-      <li><a href="History.html" class="block">History</a></li>
-      <li><a href="Language.html" class="block">Language</a></li>
+      <li><a href="index.html" class="block" id="home">Home</a></li>
+      <li><a href="History.html" class="block" id="history">History</a></li>
+      <li><a href="Language.html" class="block" id="language">Language</a></li>
       
-      <li><a href="Music.html" class="block">Music</a></li>
+      <li><a href="Music.html" class="block" id="music">Music</a></li>
       <li class="dropdown">
-        <a class="dropbtn" href="Recipes.html">Recipes</a>
+        <a class="dropbtn" href="Recipes.html" id="recipes">Recipes</a>
         <div class="dropdown-content">
           <a href="Breakfast.html">Breakfast</a>
           <a href="Mains.html">Mains</a>
@@ -38,7 +42,7 @@
         </div>
 
       </li>
-      <li><a href="contact.html" class="block">Contact</a></li>
+      <li><a href="contact.html" class="block" id="contact">Contact</a></li>
       <li><a href="Sitemap.html" class="block">Sitemap</a></li>
     </ul>
     <hr />
@@ -46,11 +50,11 @@
 <table>
   
         <tr>
-          <th><a href="Breakfast.html">Breakfast</a>
+          <th id="breakfast"><a href="Breakfast.html">Breakfast</a>
          </th>
-          <th><a href="Mains.html">Mains</a>
+          <th id="mains"><a href="Mains.html">Mains</a>
           </th>
-          <th><a href="dessert.html">Dessert</a></th>
+          <th id="dessert"><a href="dessert.html">Dessert</a></th>
         </tr>
         <tr>
             <td><a href="Breakfast.html"><img src="images/natas 2.webp" alt="natas" title="caldo"/></a></td>
@@ -59,6 +63,141 @@
         </tr>
         
 </table>
+
+<script>
+function changeBackgroundColor() {
+        const bgColors = ["green", "yellow", "red"];
+        const n = bgColors.length;
+        const randIndex = Math.floor(Math.random() * n);
+        // const b = document.getElementById("bodyA");
+        const b = document.querySelector("h1");
+        b.style.color = bgColors[randIndex];
+      }
+      document.querySelector("h1").onclick = changeBackgroundColor;
+
+      function breakfast(){
+document.getElementById("breakfast").innerText = "Pequeno Almoco"
+      }
+      function breakfast2(){
+        document.getElementById("breakfast").innerText = "Breakfast"
+      }
+
+      document.getElementById("breakfast").onmouseover = breakfast;
+      document.getElementById("breakfast").onmouseout = breakfast2;
+
+      function main(){
+document.getElementById("mains").innerText = "Jantar"
+      }
+      function main2(){
+        document.getElementById("mains").innerText = "Mains"
+      }
+
+      document.getElementById("mains").addEventListener("mouseover", function () {
+        main();
+      });
+      document.getElementById("mains").addEventListener("mouseout", function () {
+        main2();
+      });
+
+      function dessert(){
+document.getElementById("dessert").innerText = "Sobremesa"
+      }
+      function dessert2(){
+        document.getElementById("dessert").innerText = "Dessert"
+      }
+
+      document.getElementById("dessert").addEventListener("mouseover", function () {
+        dessert();
+      });
+      document.getElementById("dessert").addEventListener("mouseout", function () {
+        dessert2();
+      });
+
+      
+      function home(){
+document.getElementById("home").innerText = "Casa"
+      }
+      function home2(){
+        document.getElementById("home").innerText= "Home"
+      }
+
+      document.getElementById("home").addEventListener("mouseover", function () {
+        home();
+      });
+      document.getElementById("home").addEventListener("mouseout", function () {
+        home2();
+      });
+
+      function history(){
+document.getElementById("history").innerText = "Historia"
+      }
+      function history2(){
+        document.getElementById("history").innerText= "History"
+      }
+
+      document.getElementById("history").addEventListener("mouseover", function () {
+        history();
+      });
+      document.getElementById("history").addEventListener("mouseout", function () {
+        history2();
+      });
+
+      function language(){
+document.getElementById("language").innerText = "Lingua"
+      }
+      function language2(){
+        document.getElementById("language").innerText= "Language"
+      }
+
+      document.getElementById("language").addEventListener("mouseover", function () {
+        language();
+      });
+      document.getElementById("language").addEventListener("mouseout", function () {
+        language2();
+      });
+
+      function music(){
+document.getElementById("music").innerText = "Musica"
+      }
+      function music2(){
+        document.getElementById("music").innerText= "Music"
+      }
+
+      document.getElementById("music").addEventListener("mouseover", function () {
+        music();
+      });
+      document.getElementById("music").addEventListener("mouseout", function () {
+        music2();
+      });
+
+      function recipes(){
+document.getElementById("recipes").innerText = "Receitas"
+      }
+      function recipes2(){
+        document.getElementById("recipes").innerText= "Recipes"
+      }
+
+      document.getElementById("recipes").addEventListener("mouseover", function () {
+        recipes();
+      });
+      document.getElementById("recipes").addEventListener("mouseout", function () {
+        recipes2();
+      });
+
+      function contact(){
+document.getElementById("contact").innerText = "Contacto"
+      }
+      function contact2(){
+        document.getElementById("contact").innerText= "Contact"
+      }
+
+      document.getElementById("contact").addEventListener("mouseover", function () {
+        contact();
+      });
+      document.getElementById("contact").addEventListener("mouseout", function () {
+        contact2();
+      });
+</script>
 
 </body>
 
